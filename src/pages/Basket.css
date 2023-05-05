@@ -1,0 +1,17 @@
+.basketList{
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+
+}
+.basket p{
+    text-align: center;
+    font-size: 40px;
+
+}
+.basket{
+    background-color: #2196F3;
+}
+.deleteFromBasket{
+    background-color: red;
+}

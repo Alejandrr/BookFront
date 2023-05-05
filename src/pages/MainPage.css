@@ -1,0 +1,74 @@
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    border: 2px solid black;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+.mainPageBtn{
+    margin-left: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.basketBtn{
+    position: relative;
+    margin-right: 30px;
+    border-radius: 50%;
+    height: 40px;
+    background-color: white;
+    color: black;
+}
+
+.bookList{
+    display: flex;
+    background-color: #2196F3;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
+    width: 100%;
+}
+.bookBlock{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: 30px;
+border: 1px solid black;
+    border-radius: 12px;
+    background-color: yellow;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.bookImg{
+    width: 200px;
+    height: 250px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.addToBasket{
+   font-size: 30px;
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 10vh;
+    color:white;
+}
