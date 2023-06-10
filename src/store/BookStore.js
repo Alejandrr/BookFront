@@ -1,21 +1,26 @@
 import { makeAutoObservable} from "mobx"
+
 export default class BookStore{
     constructor(){
-this._type = []
-        this._book=[
-            {id:1,name:"Кобзар",author:"Т.Г.Шевченко",price:"300",img:"kobzar.jpg"},
-            {id:2,name:"Психологія впливу",author:"Р.Чалдині",price:"200",img:"chaldini.jpg"},
-            {id:4,name:"Рядовий",author:"Д.Паттерсон",price:"50",img:"private.jpg"},
-            {id:5,name:"Чорнильно-чорне серце",author:"Р.Галбрейт",price:"25",img:"blackheart.jpg"},
-            {id:6,name:"Жити просто",author:"Г.Осадко",price:"10",img:"prosto.jpg"},
-            {id:7,name:"Чому не Еванс?",author:"А.Крісті",price:"5",img:"why_not.jpg"},
-            {id:10,name:"Кобзар",author:"Т.Г.Шевченко",price:"3000",img:"kobza.jpg"},
-        ]
+this._type = []       
         this._basket = []
         this._selectedType={}
         this._page=1
         this._limit=10
-        makeAutoObservable(this)
+         // Завантаження даних з JSON файлу
+        makeAutoObservable(this);
+        this.loadBooksFromJSON();
+       
+       
+    }
+    async loadBooksFromJSON() {
+        try {
+            const response = await fetch("books.json");
+            const data = await response.json();
+            this._books = data.books;
+          } catch (error) {
+            console.error("Error loading books from JSON:", error);
+          }
     }
     setSelectedType(selectedType){
         this.setPage(1)
